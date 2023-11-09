@@ -17,4 +17,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\LearnHub.Shared\LearnHub.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

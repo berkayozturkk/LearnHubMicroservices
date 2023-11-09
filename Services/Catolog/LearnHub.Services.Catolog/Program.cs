@@ -1,4 +1,5 @@
 using LearnHub.Services.Catolog.ConfigurationSettings;
+using LearnHub.Services.Catolog.Services;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 
@@ -16,6 +17,8 @@ builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 {
     return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 
